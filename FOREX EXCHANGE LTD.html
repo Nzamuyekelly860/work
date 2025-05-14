@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group Work</title>
+    <style>
+        #a {
+            background-color: rgb(54, 142, 201);
+            border-radius: 20px;
+            width: 60px;
+        }
+        #b {
+            background-color: rgb(231, 156, 42);
+            border-radius: 20px;
+            width: 50px;
+        }
+        #c {
+            background-color: rgb(132, 240, 32);
+            border-radius: 20px;
+            width: 40px;
+        }
+        .hidden {
+            display: none;
+        }
+        #group3,button {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+            padding: 3.5px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <center> 
+        <fieldset id="a">
+            <fieldset id="b">
+                <button><span id="group3">💵 Group 3-company</span></button><br>forex-exchange ltd</p>
+                <div id="students" class="hidden">
+                    <p><b><strong><mark><i>1. Thierry Ishimwe</p></i></mark></strong></b>
+                    <p>2. Inezayimana Prince</p>
+                    <p>3. Shimwa Eloi Basil</p>
+                    <p>4. Mukangororano Aline</p>
+                    <p>5. Mugisha Kevin</p>
+                    <P>6. Usanase Kingston</P> 
+                    <p>7.Murekatete Denyse</p> 
+                
+
+                </div>
+                <fieldset id="c">
+                    <div class="converter-container">
+                        <h2>Currency Converter</h2>
+                        <input type="number" id="amount" placeholder="Enter amount">
+                        <br>
+                        <label>From: </label>
+                        <select id="from">
+                            <option value="FRW">Rwandan Franc (FRW)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="NGN">Nigerian Naira (NGN)</option>
+                            <option value="KES">Kenyan Shilling (KES)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                        </select>
+                        <br>
+                        <label>To: </label>
+                        <select id="to">
+                            <option value="FRW">Rwandan Franc (FRW)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="NGN">Nigerian Naira (NGN)</option>
+                            <option value="KES">Kenyan Shilling (KES)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                        </select>
+                        <br><br>
+                        <button onclick="convertCurrency()">Convert</button>
+                        <p id="result"></p>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+    </center>
+
+    <script>
+        document.getElementById("group3").addEventListener("click", function() {
+            let studentsDiv = document.getElementById("students");
+            studentsDiv.classList.toggle("hidden");
+        });
+
+        function convertCurrency() {
+            let amount = document.getElementById("amount").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let conversionRates = {
+                "FRW": { "USD": 0.00085, "KES": 0.11, "NGN": 0.40, "EUR": 0.00075, "GBP": 0.00065 },
+                "USD": { "FRW": 1175, "KES": 128.75, "NGN": 460, "EUR": 0.92, "GBP": 0.85 },
+                "NGN": { "FRW": 2.5, "USD": 0.0022, "KES": 0.33, "EUR": 0.002, "GBP": 0.0018 },
+                "KES": { "FRW": 9, "USD": 0.0078, "NGN": 3, "EUR": 0.007, "GBP": 0.0065 },
+                "EUR": { "FRW": 1300, "USD": 1.09, "KES": 144.1, "NGN": 500, "GBP": 0.85 },
+                "GBP": { "FRW": 1525, "USD": 1.17, "KES": 168.5, "NGN": 580, "EUR": 1.18 }
+            };
+
+            if (conversionRates[from] && conversionRates[from][to]) {
+                let result = amount * conversionRates[from][to];
+                document.getElementById("result").innerText = `Converted Amount: ${result.toFixed(2)} ${to}`;
+            } else {
+                document.getElementById("result").innerText = "Conversion rate not available.";
+            }
+        }
+    </script>
+
+</body>
+</html>
