@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        #myd{
+        height: 500px;
+        width: 200px;
+        padding: 50px;
+        margin-bottom: 20px;
+        background-color:green;
+        }
+        #myf{
+            height:400px ;
+            width: 500px;
+            padding: 50px;
+            margin-bottom: 20px;
+            background-color:teal;
+        }
+        #myg{
+            height: 100px;
+            width: 400px;
+            padding: 50px;
+            margin-bottom: 20px;
+            background-color: rosybrown;
+        }
+        select{
+            width:80px;
+            height: 15px;
+            margin-top: 10px;
+        }
+        #class{
+            width: 60px;
+            height: 15px;
+            background-color: black;
+            color: aliceblue;
+        }
+        #box{
+            width: 60px;
+            height: 15px;
+            background-color: black;
+            color: aliceblue;
+        }
+        #rel{
+            width: 60px;
+            height: 15px;
+            background-color: black;
+            color: aliceblue;
+        }
+        button{
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body><center>
+ <fieldset id="myd">
+    <fieldset id="myf">
+        <select Align="TOP"><optgroup >
+            <option><u>GROUP3</u></option>
+        <option value="">UWAMAHORO Vanesa</option>
+        <option value="">ASHIMWE Beinfaite</option>
+        <option value="">MUKAMUNEZA Rosine</option>
+        <option value="">UWAYEZU Syliver</option>
+        <option value="">MUGISHA Kevin</option>
+        <option value="">KWIZERA NDAGIJE Kevin</option></optgroup>
+        </select>
+        <p>Company forex-exchange ltd</p>
+        <fieldset id="myg">
+             <label>amount</label>
+             <input type="number">
+             <label>rwf</label>
+             <button type="button" id="rwf" onclick="RWFto$()">rwfto$</button>
+             <label>dolls</label>
+             <button type="button" id="$" onclick="$toRWF()" >$torwf</button>
+             <p id="result"></p>
+             <script>
+                let a=document.getElementById("rwf");
+                let b=document.getElementById("$");
+            
+                function RWFto$ (){
+                    let a=document.getElementById("rwf").value;
+                    let b=document.getElementById("$").value;
+                    let c=document.getElementById("result").innerHTML=Number(b)/1440;
+                }
+                function $toRWF(){
+                    let a=document.getElementById("rwf").value;
+                    let b=document.getElementById("$").value;
+                    let c=document.getElementById("result").innerHTML=Number(a)*1440;
+                }
+                
+
+                
+
+
+
+             </script>
+        </fieldset>
+    </fieldset>
+ </fieldset>  </center> 
+</body>
+</html>
