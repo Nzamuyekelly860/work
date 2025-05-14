@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>forex</title>
+    <style type="text/css">
+       body{
+        border-radius: 250;
+        margin: 100px;
+        padding: 200px;;
+         background-image: url(tui.jpg);
+        
+       }
+       div{
+        background-image: url(mk.jpg);
+        height: 280px;
+        width: 270px;
+        align-content: center;
+        background-color:green;
+       }
+       h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+       }
+       fieldset{
+        background-color: brown;
+       }
+       select{
+        width: 160px;
+        height: 20px;
+       }
+    </style>
+</head><center><H1>HOSTED BY KELLY</H1>
+<fieldset>
+<body><select><option></option><option>KELLY</option><option>divine</option><option>luckman</option><option>regis</option><option>abatesi</option></select>
+    <h4>MONEY EXCHANGE</h4>
+    <P class="paragraph">  $ frw</P>
+    <div class="container">
+        <p id="demo">answer here<br><br><input type="text">
+        <div class="button">
+            <button onclick="enter()">frw to $</button>
+            <button onclick="repeat()"> $ to frw</button>
+        </div>
+    </div>
+    <script>
+        function enter(){
+            var T=parseFloat(prompt("Enter the money(frw)"))
+            let resurt
+            if (T/1300){
+                resurt =T/1300;
+                document.getElementById("demo").innerHTML=(resurt)+"FRW";
+            }
+            else{
+                document.getElementById("demo").innerHTML="impossible"
+            }
+        }
+        function repeat(){
+            var C=parseFloat(prompt("Enter the money ($)"))
+            let answer
+            if (C*1300){
+                answer=C*1300;
+                document.getElementById("demo").innerHTML=(answer)+"Frw"
+            }
+            else{
+                document.getElementById("demo").innerHTML="invalid number"
+            }
+        }
+
+    </script></body></fieldset>
+</body></center>
+</html>
