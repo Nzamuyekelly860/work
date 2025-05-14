@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>forex</title>
+    <style type="text/css">
+       body{
+      
+        margin: 10px;
+        padding: 200px;;
+    
+        
+       }
+       div{
+      
+        height: 200px;
+        width: 400px;
+        align-content: center;
+        background-color:green;
+       }
+       fieldset{
+        background-color: brown;
+        width: 700px;
+        height: 500px;
+       }
+       .maney{
+        background-color: blue;
+        width: 500px;
+        height: 400px;
+    ;margin-top: 10px;
+       }
+    </style>
+</head><center>
+<fieldset>
+<body align="margin-top">
+    <fieldset class="maney">
+
+    <button type="button" onclick="maney()" id="y"> GROUPE#</button>
+    <P >Company-forex-exchange</P>
+    <P class="paragraph">  $ frw</P>
+    <div class="container">
+        <p id="demo">result<br><br><input type="text">
+        <div class="button">
+            <button onclick="enter()">frw to $</button>
+            <button onclick="repeat()"> $ to frw</button>
+        </div>
+    </div>
+    </fieldset>
+    <script>
+        function maney(){
+            document.getElementById("y").value;
+           
+            document.getElementById("y").innerHTML="1:ISHIMWE Rosine <br> 2:UMUHOZA ANGE Diane <br>3:MUTONI Sandline <br>4:ISHMWE Fabrice <br>5:NZAMUYE Kelly "
+          
+        } 
+        
+    
+        function enter(){
+            var T=(prompt("Enter the money(frw)"))
+          
+            if (T/1300){
+                resurt =T/1300;
+                document.getElementById("demo").innerHTML=(resurt)+"FRW";
+            }
+            else{
+                document.getElementById("demo").innerHTML="impossible"
+            }
+        }
+        function repeat(){
+            var C=(prompt("Enter the money ($)"))
+           
+            if (C*1300){
+                answer=C*1300;
+                document.getElementById("demo").innerHTML=(answer)+"Frw"
+            }
+            else{
+                document.getElementById("demo").innerHTML="invalid number"
+            }
+        }
+
+    </script></body></fieldset>
+</body></center>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
